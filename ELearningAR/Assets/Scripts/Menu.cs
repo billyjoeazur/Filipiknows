@@ -15,4 +15,9 @@ public class Menu : MonoBehaviour
 	{
 		SceneManager.LoadScene("Hugis");
 	}
+
+	public void MainMenu()
+	{
+		SceneManager.LoadScene("Main");
+	}
 }
