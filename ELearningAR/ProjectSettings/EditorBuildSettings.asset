@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hugis.unity
     guid: 9070e0a63d7d1f246ad16a4ec0b55453
+  - enabled: 1
+    path: Assets/Scenes/Katawan.unity
+    guid: 4215e34c85af4ea4789019376a5d74bd
+  - enabled: 1
+    path: Assets/Scenes/RaycastTry.unity
+    guid: b9fcdbf5b4bd8af468ac164b679ee14c
   m_configObjects: {}

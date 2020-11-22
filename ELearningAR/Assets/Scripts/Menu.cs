@@ -16,6 +16,16 @@ public class Menu : MonoBehaviour
 		SceneManager.LoadScene("Hugis");
 	}
 
+	public void Colorsres()
+	{
+		SceneManager.LoadScene("RaycastTry");
+	}
+
+	public void BodyParts()
+	{
+		SceneManager.LoadScene("Katawan");
+	}
+
 	public void MainMenu()
 	{
 		SceneManager.LoadScene("Main");
