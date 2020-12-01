@@ -21,6 +21,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Katawan.unity
     guid: 4215e34c85af4ea4789019376a5d74bd
   - enabled: 1
-    path: Assets/Scenes/RaycastTry.unity
-    guid: b9fcdbf5b4bd8af468ac164b679ee14c
+    path: Assets/Scenes/Kulay.unity
+    guid: 93643a9a887418c438ea6527331e619f
+  - enabled: 1
+    path: Assets/Scenes/About.unity
+    guid: bc5ae9cb159dc7e418278712c45b3a61
+  - enabled: 1
+    path: Assets/Scenes/QuizKulay.unity
+    guid: 6f207c769bbf5f84f8202a048f0a7c30
   m_configObjects: {}

@@ -1,5 +1,7 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class SwipeDetector : MonoBehaviour
 {
@@ -57,7 +59,24 @@ public class SwipeDetector : MonoBehaviour
         }
 		else
 		{
-			Debug.Log("TOUCH!!!"); // DITO ILALAGAY YUNG SOUNDS
+			Speak();
+		}
+	}
+
+	public Text objName;
+	private void Speak()
+	{
+		Ray ray = Camera.main.ScreenPointToRay(Input.touches[0].position);
+		RaycastHit hit;
+		if (Physics.Raycast(ray, out hit))
+		{
+			if (hit.collider != null)
+			{
+				Debug.Log(hit.transform.name.ToString());
+				objName.text = hit.transform.name;
+				string audioname = hit.transform.name;
+				FindObjectOfType<AudioManager>().Play(audioname);
+			}
 		}
 	}
 

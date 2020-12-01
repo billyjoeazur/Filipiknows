@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -41,7 +42,7 @@ public class RayGun : MonoBehaviour
 		}
 	}
 
-	void Shoot()
+	public void Shoot()
 	{
 		Ray ray = Camera.main.ScreenPointToRay(Input.touches[0].position);
 		RaycastHit hit;
