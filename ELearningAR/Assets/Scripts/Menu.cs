@@ -41,28 +41,58 @@ public class Menu : MonoBehaviour
 		SceneManager.LoadScene("About");
 	}
 
-
-	public void QuizNumbers()
+	public void Guide()
 	{
 		FindObjectOfType<AudioManager>().Play("click");
-		SceneManager.LoadScene("QuizNumero");
+		SceneManager.LoadScene("Guide");
 	}
 
-	public void QuizShapes()
+	public void Category()
 	{
 		FindObjectOfType<AudioManager>().Play("click");
-		SceneManager.LoadScene("QuizHugis");
+		SceneManager.LoadScene("Category");
 	}
 
-	public void QuizColors()
+	public void Quiz()
 	{
 		FindObjectOfType<AudioManager>().Play("click");
-		SceneManager.LoadScene("QuizKulay");
+		SceneManager.LoadScene("Quiz");
 	}
 
-	public void QuizBodyParts()
+	public void Lesson()
 	{
 		FindObjectOfType<AudioManager>().Play("click");
-		SceneManager.LoadScene("QuizKatawan");
+		SceneManager.LoadScene("Lesson");
+	}
+
+
+	//public void QuizNumbers()
+	//{
+	//	FindObjectOfType<AudioManager>().Play("click");
+	//	SceneManager.LoadScene("QuizNumero");
+	//}
+
+	//public void QuizShapes()
+	//{
+	//	FindObjectOfType<AudioManager>().Play("click");
+	//	SceneManager.LoadScene("QuizHugis");
+	//}
+
+	//public void QuizColors()
+	//{
+	//	FindObjectOfType<AudioManager>().Play("click");
+	//	SceneManager.LoadScene("QuizKulay");
+	//}
+
+	//public void QuizBodyParts()
+	//{
+	//	FindObjectOfType<AudioManager>().Play("click");
+	//	SceneManager.LoadScene("QuizKatawan");
+	//}
+
+	private string myURL = "http://www.facebook.com/billyjoeazur123";
+	public void GoURL()
+	{
+		Application.OpenURL(myURL);
 	}
 }
