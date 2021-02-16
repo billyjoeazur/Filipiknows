@@ -65,31 +65,6 @@ public class Menu : MonoBehaviour
 		SceneManager.LoadScene("Lesson");
 	}
 
-
-	//public void QuizNumbers()
-	//{
-	//	FindObjectOfType<AudioManager>().Play("click");
-	//	SceneManager.LoadScene("QuizNumero");
-	//}
-
-	//public void QuizShapes()
-	//{
-	//	FindObjectOfType<AudioManager>().Play("click");
-	//	SceneManager.LoadScene("QuizHugis");
-	//}
-
-	//public void QuizColors()
-	//{
-	//	FindObjectOfType<AudioManager>().Play("click");
-	//	SceneManager.LoadScene("QuizKulay");
-	//}
-
-	//public void QuizBodyParts()
-	//{
-	//	FindObjectOfType<AudioManager>().Play("click");
-	//	SceneManager.LoadScene("QuizKatawan");
-	//}
-
 	private string myURL = "http://www.facebook.com/billyjoeazur123";
 	public void GoURL()
 	{
