@@ -44,26 +44,602 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: isa
-    clip: {fileID: 8300000, guid: a5111be3c8541ff419a25b9b2ad5815f, type: 3}
+  - name: Isa
+    clip: {fileID: 8300000, guid: 4adfedb9475357244adcc234772c7fc1, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: dalawa
-    clip: {fileID: 8300000, guid: badb84b71b661164fbb2498264cd4e66, type: 3}
+  - name: Dalawa
+    clip: {fileID: 8300000, guid: bbff9e1a966d7f74090f918ad1bb5d2a, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: tatlo
-    clip: {fileID: 8300000, guid: 2041287101f8587449b45d3f4daa57ca, type: 3}
+  - name: Tatlo
+    clip: {fileID: 8300000, guid: 2dce306d9260a2a4fb3b54cd364d1418, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: click
-    clip: {fileID: 8300000, guid: 846a603d88eccdc43ad4eeb48b848a8e, type: 3}
+  - name: Apat
+    clip: {fileID: 8300000, guid: ac600f33e39a6b640874dd36cd364303, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Lima
+    clip: {fileID: 8300000, guid: f46be8be383d0e24d922d8fcda19963b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Anim
+    clip: {fileID: 8300000, guid: 600bfe5f5dfe3d1458cb8d25682868d2, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Pito
+    clip: {fileID: 8300000, guid: d5ab5f25be3b9be4393c10412dfc75c5, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Walo
+    clip: {fileID: 8300000, guid: db7dbb996493e4e429e0b6bdecf406e7, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Siyam
+    clip: {fileID: 8300000, guid: 4622300c1d35a404cb609feb61e01b33, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Sampu
+    clip: {fileID: 8300000, guid: 060af95a2f1c9624cabaa41a2c6e0142, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Labing-isa
+    clip: {fileID: 8300000, guid: 98fdb30f4eb5ded46b727c249cbf9bf3, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Labing-dalawa
+    clip: {fileID: 8300000, guid: 4086bb2ddcd31f643ad5db904ac7593a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Labing-tatlo
+    clip: {fileID: 8300000, guid: 3675856d4a15e6a448f0dfaccde77d9b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Labing-apat
+    clip: {fileID: 8300000, guid: f00b2d1ea501bbe4c8b155f3b56d2092, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Labing-lima
+    clip: {fileID: 8300000, guid: 1ecd8e431987a36479f1a9602bf18efd, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Labing-anim
+    clip: {fileID: 8300000, guid: ef40570dc6e0cdc4daca4bee67e5a359, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Labing-pito
+    clip: {fileID: 8300000, guid: 80dfcb2f8ff054a428c41828be676f12, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Labing-walo
+    clip: {fileID: 8300000, guid: 55e79e58c71ea4242b715a58910f3e79, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Labing-siyam
+    clip: {fileID: 8300000, guid: 2dbf2aff0565a4649aadb36a1b8532c0, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Dalawampu
+    clip: {fileID: 8300000, guid: 381d6469126881e4fad5d44283138f90, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Dalawampu't isa
+    clip: {fileID: 8300000, guid: 14a396b65bd267a4a89e63c1d2f35750, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Dalawampu't dalawa
+    clip: {fileID: 8300000, guid: a8498cc31b82ab349b26f9de4ce9b7e7, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Dalawampu't tatlo
+    clip: {fileID: 8300000, guid: 767d9a3872908304684d3ae45605f06d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Dalawampu't apat
+    clip: {fileID: 8300000, guid: 18b643144ab69de41b2f8b49c6e232bd, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Dalawampu't lima
+    clip: {fileID: 8300000, guid: 0fce12e454507ae42bef2b16cd9d6c75, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Dalawampu't anim
+    clip: {fileID: 8300000, guid: 4684dbdba2451a849b238dd0b9aee6a8, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Dalawampu't pito
+    clip: {fileID: 8300000, guid: e78717687b6c323478bcfc524d6db5df, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Dalawampu't walo
+    clip: {fileID: 8300000, guid: 2b1c11688485d794fa606a7a4f4c700f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Dalawampu't siyam
+    clip: {fileID: 8300000, guid: a1d0ffe6e35fd4b478e49d2f783fdab4, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Tatlumpu
+    clip: {fileID: 8300000, guid: 8ac9b31fa33027142b5d5b9dbffcf378, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Tatlumpu't isa
+    clip: {fileID: 8300000, guid: 3bc4ed2750c5db34c8959f2b89a83cf6, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Tatlumpu't dalawa
+    clip: {fileID: 8300000, guid: 0c5184065d28f344c818636828e68b8a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Tatlumpu't tatlo
+    clip: {fileID: 8300000, guid: f5a4e623ea06d534597498dfc9a92237, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Tatlumpu't apat
+    clip: {fileID: 8300000, guid: 0f71837852e1cb8479ae0ef7d42e239f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Tatlumpu't lima
+    clip: {fileID: 8300000, guid: 779cca14c5180bc42aac81ae6a2fb45c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Tatlumpu't anim
+    clip: {fileID: 8300000, guid: 94c25742d16b5ce4182da98fd0819982, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Tatlumpu't pito
+    clip: {fileID: 8300000, guid: a47dcc2c8a9764d42a83f845760a3116, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Tatlumpu't walo
+    clip: {fileID: 8300000, guid: 870871997e251514e88895a968bc077c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Tatlumpu't siyam
+    clip: {fileID: 8300000, guid: f00e5cc05b656aa4dac4852b3f081c83, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Apatnapu
+    clip: {fileID: 8300000, guid: b077e25ea85017f4aac5d4cda307ab1c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Apatnapu't isa
+    clip: {fileID: 8300000, guid: a1717449644ce824abcb7d7bc8e4edf9, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Apatnapu't dalawa
+    clip: {fileID: 8300000, guid: fd57247810edb3242b448bcba4ed703d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Apatnapu't tatlo
+    clip: {fileID: 8300000, guid: b3994954da964104787b2f5406d21310, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Apatnapu't apat
+    clip: {fileID: 8300000, guid: b58b4e00b9af4e547b0248424d67f89e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Apatnapu't lima
+    clip: {fileID: 8300000, guid: 6b634300bb1220143a9a3911929fcfe4, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Apatnapu't anim
+    clip: {fileID: 8300000, guid: 28ceb4e5d68c2a14e832e7d1f33ed05e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Apatnapu't pito
+    clip: {fileID: 8300000, guid: c9a3f3a7c963a984191fa83f4b6c8f7b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Apatnapu't walo
+    clip: {fileID: 8300000, guid: fdefb2ee5b876c848b6a6c61bb0349d4, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Apatnapu't siyam
+    clip: {fileID: 8300000, guid: b7059512d9b32634780fccc1c733e934, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Limampu't isa
+    clip: {fileID: 8300000, guid: 5193de56f49a0cd4ab31f06cf072b3e7, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Limampu't dalawa
+    clip: {fileID: 8300000, guid: 18931e77cb79be24c8dc2c51df16f6c9, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Limampu't tatlo
+    clip: {fileID: 8300000, guid: cbc115340a924b042849490d966073a6, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Limampu't apat
+    clip: {fileID: 8300000, guid: 224db1b0472d8db43b08e38ae95234cf, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Limampu't lima
+    clip: {fileID: 8300000, guid: 22af019c9f273074fa232146a9fb7bb4, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Limampu't anim
+    clip: {fileID: 8300000, guid: d2ffb1c797261d743a42e464b1f1e3fe, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Limampu't pito
+    clip: {fileID: 8300000, guid: 05e0b8ce120e1994d83f2d02c2f62efe, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Limampu't walo
+    clip: {fileID: 8300000, guid: 3bc0a8debc0c7c74a853d5c3e149f663, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Limampu't siyam
+    clip: {fileID: 8300000, guid: 1edd56719f4d0634c88b2dc386be6fcb, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Animnapu
+    clip: {fileID: 8300000, guid: 1a502061b7f8a8744a837991b4601081, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Animnapu't isa
+    clip: {fileID: 8300000, guid: ee03b3507fdc48e46a02dfb2a5635347, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Animnapu't dalawa
+    clip: {fileID: 8300000, guid: d2b762c85db2f9f4d95cf897f598e5f3, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Animnapu't tatlo
+    clip: {fileID: 8300000, guid: 2d4ac1ee197d58042acd7891169671e8, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Animnapu't apat
+    clip: {fileID: 8300000, guid: 7ed15c37f0779194cbdf359f84e664dc, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Animnapu't lima
+    clip: {fileID: 8300000, guid: ce0cc7dacec53464a8ae7112fe82ae65, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Animnapu't anim
+    clip: {fileID: 8300000, guid: bc3b10809989eab4e993abe52fd9997e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Animnapu't pito
+    clip: {fileID: 8300000, guid: f1c2d8320d2523a4baeefd6b743bcef4, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Animnapu't walo
+    clip: {fileID: 8300000, guid: a1a067d1a520d6240b9dc093aa31ec2a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Animnapu't siyam
+    clip: {fileID: 8300000, guid: 49c83fa01617d14419eeecf09a33b993, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Pitumpu
+    clip: {fileID: 8300000, guid: 9a5115a1f59398148a0ddbf501110179, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Pitumpu't isa
+    clip: {fileID: 8300000, guid: c76fae8eb438e744ab6f14b64357e32c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Pitumpu't dalawa
+    clip: {fileID: 8300000, guid: dbcbdc9cbca738945afdac71c4cc2d1a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Pitumpu't tatlo
+    clip: {fileID: 8300000, guid: 88be9c391cb92d94f929f920a746e426, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Pitumpu't apat
+    clip: {fileID: 8300000, guid: 070e0dd1f406f9143a3020d15ddefe1f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Pitumpu't lima
+    clip: {fileID: 8300000, guid: 80d8b71a3739a134d9d2dfaf4bff3c18, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Pitumpu't anim
+    clip: {fileID: 8300000, guid: 9381b574f641c674e8d70455aa5d1166, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Pitumpu't pito
+    clip: {fileID: 8300000, guid: d58d5416c6195ab4f87b8056145e8e96, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Pitumpu't walo
+    clip: {fileID: 8300000, guid: 54655ac6e84c64245b5f29eca82426e8, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Pitumpu't siyam
+    clip: {fileID: 8300000, guid: 392f127e0a7278641b666458a5ebff29, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Walumpu
+    clip: {fileID: 8300000, guid: d613da765928b7849ac1ec975643ca69, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Walumpu't isa
+    clip: {fileID: 8300000, guid: 39f61ab7ce87fff47a13844460f31425, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Walumpu't dalawa
+    clip: {fileID: 8300000, guid: 206a0416f0801114fba85f55bf679ecc, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Walumpu't tatlo
+    clip: {fileID: 8300000, guid: 5197f6f2ef01f1d4ea237eb4e16c3a00, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Walumpu't apat
+    clip: {fileID: 8300000, guid: 2a2f44f4b73256b49a13ccda46b0121f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Walumpu't lima
+    clip: {fileID: 8300000, guid: 8cfee7a92406efc4a8cac6f63c39968e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Walumpu't anim
+    clip: {fileID: 8300000, guid: 9de3b3fd39e0930479f18dc69bd5841f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Walumpu't pito
+    clip: {fileID: 8300000, guid: 92864827c632d0b46807f9da4420f418, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Walumpu't walo
+    clip: {fileID: 8300000, guid: e1a114f9f959e884e881c9c7d9a90cdb, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Walumpu't siyam
+    clip: {fileID: 8300000, guid: f713453de16830a40bd9494438a139a7, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Siyamnapu
+    clip: {fileID: 8300000, guid: 1ed89c277f7a8374c8c2747e7e42b6e2, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Siyamnapu't isa
+    clip: {fileID: 8300000, guid: 63b4054d1958f8348b07d33487cbb87b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Siyamnapu't dalawa
+    clip: {fileID: 8300000, guid: 3182c40bbae22454d833b0d8741e6ed8, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Siyamnapu't tatlo
+    clip: {fileID: 8300000, guid: 3fb0994c66cdb1047b2a7e67c5523922, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Siyamnapu't apat
+    clip: {fileID: 8300000, guid: 7f79cb68e077e734bb5702453c2564af, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Siyamnapu't lima
+    clip: {fileID: 8300000, guid: 204a33858aee2354e980b58d068d498e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Siyamnapu't anim
+    clip: {fileID: 8300000, guid: ec0ba052164c50742858c5947a60d080, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Siyamnapu't pito
+    clip: {fileID: 8300000, guid: 766a6d1356c89ca4fb8ba6cb5bf2f115, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Siyamnapu't walo
+    clip: {fileID: 8300000, guid: d2f8f04af17ca104db7ed9f55e859ea6, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Siyamnapu't siyam
+    clip: {fileID: 8300000, guid: 76fff139ea519cb4f833b5eaa0332dc8, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Isang daan
+    clip: {fileID: 8300000, guid: 2d52131dacf18324680b1b1d6ac32a8d, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Limampu
+    clip: {fileID: 8300000, guid: 98f9ad9d171066a419a33230c4705d89, type: 3}
     volume: 1
     pitch: 1
     loop: 0
