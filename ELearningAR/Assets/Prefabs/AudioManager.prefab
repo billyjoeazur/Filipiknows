@@ -644,3 +644,123 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: Asul
+    clip: {fileID: 8300000, guid: 1eda286d8d0c35c4094e3aaa9c6b847e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Berde
+    clip: {fileID: 8300000, guid: aeb503188074b4744b8281bf4f578937, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Dilaw
+    clip: {fileID: 8300000, guid: e6577538074ee1049aaa71a0232ff489, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Itim
+    clip: {fileID: 8300000, guid: a06da7a4a8342f644897360dcd3b8b57, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kahel
+    clip: {fileID: 8300000, guid: 0ed01a9fbc7f3ef4b904b6caa6706756, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kayumanggi
+    clip: {fileID: 8300000, guid: 20a38c46145b18b41863100978b98e33, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Lila
+    clip: {fileID: 8300000, guid: 7aa7fbebacd6e5d41a271656a7bbf629, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Pula
+    clip: {fileID: 8300000, guid: 4155bab2009e7304b81b15cb354bc9a9, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Puti
+    clip: {fileID: 8300000, guid: f6b2f4fb4b6a2e643be2b3d78150b3bb, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Rosas
+    clip: {fileID: 8300000, guid: 840e4d83e29cf6e4ab7b0b9c4e5ca67c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Hugis-brilyante
+    clip: {fileID: 8300000, guid: 840e4d83e29cf6e4ab7b0b9c4e5ca67c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Bilog
+    clip: {fileID: 8300000, guid: 0fd1f7ed3af9adf429bcdec4f180a428, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Habilog
+    clip: {fileID: 8300000, guid: 962b75da0b7360d4892a1fafb577a669, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Hexaguno
+    clip: {fileID: 8300000, guid: 552afe777c8b9b342b3936258c256618, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Hugis-tala
+    clip: {fileID: 8300000, guid: 63fcfc8ea0b2a8144a6df092ae4f4967, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Parihaba
+    clip: {fileID: 8300000, guid: 5c7b38ac6db0eb941bda544dac7122d7, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Parisukat
+    clip: {fileID: 8300000, guid: fd19a234c0491994c94bdf7875c03131, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Pentaguno
+    clip: {fileID: 8300000, guid: 0fff3b0c93f29264d91e85c3d440fe80, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Tatsulok
+    clip: {fileID: 8300000, guid: e7c98c289708f004a8ae1d5acbdc8fc0, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: click
+    clip: {fileID: 8300000, guid: 846a603d88eccdc43ad4eeb48b848a8e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
