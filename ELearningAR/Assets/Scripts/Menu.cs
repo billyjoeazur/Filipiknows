@@ -62,7 +62,7 @@ public class Menu : MonoBehaviour
 	public void Lesson()
 	{
 		FindObjectOfType<AudioManager>().Play("click");
-		SceneManager.LoadScene("Lesson");
+		SceneManager.LoadScene("Lessons");
 	}
 
 	private string myURL = "http://www.facebook.com/billyjoeazur123";
