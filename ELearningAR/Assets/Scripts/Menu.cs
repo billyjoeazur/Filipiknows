@@ -53,10 +53,10 @@ public class Menu : MonoBehaviour
 		SceneManager.LoadScene("Category");
 	}
 
-	public void Quiz()
+	public void QuizLevels()
 	{
 		FindObjectOfType<AudioManager>().Play("click");
-		SceneManager.LoadScene("Quiz");
+		SceneManager.LoadScene("QuizLevels");
 	}
 
 	public void Lesson()
