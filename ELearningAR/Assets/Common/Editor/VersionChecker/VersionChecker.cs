@@ -6,6 +6,8 @@ Vuforia is a trademark of PTC Inc., registered in the United States and other
 countries.
 ===============================================================================*/
 
+// This is no longer required in Unity 2019.2, the package manager dependecy will automatically include the right version of Vuforia Engine.
+#if !UNITY_2019_2_OR_NEWER
 using System;
 using System.IO;
 using System.Reflection;
@@ -225,3 +227,4 @@ internal class NewVersionPopup
         return version == null ? "<no version>" : string.Format("{0}.{1}", version.Major, version.Minor);
     }
 }
+#endif

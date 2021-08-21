@@ -1,5 +1,5 @@
 /*==============================================================================
-Copyright (c) 2015-2017 PTC Inc. All Rights Reserved.
+Copyright (c) 2019 PTC Inc. All Rights Reserved.
  
 Copyright (c) 2015 Qualcomm Connected Experiences, Inc.
 All Rights Reserved.
@@ -47,10 +47,6 @@ namespace Vuforia.EditorClasses
                     PlayerSettings.Android.androidTVCompatibility = false;
                 }
 
-                EnableVuforia(androidBuildTarget);
-
-                CheckVuforiaConfigurationForEyewearSettings(androidBuildTarget);
-
                 // Here we set the scripting define symbols for Android
                 // so we can remember that the settings were set once.
                 PlayerSettings.SetScriptingDefineSymbolsForGroup(androidBuildTarget, androidSymbols + ";" + VUFORIA_ANDROID_SETTINGS);
@@ -63,10 +59,6 @@ namespace Vuforia.EditorClasses
             iOSSymbols = iOSSymbols ?? "";
             if (!iOSSymbols.Contains(VUFORIA_IOS_SETTINGS))
             {
-                EnableVuforia(iOSBuildTarget);
-
-                CheckVuforiaConfigurationForEyewearSettings(iOSBuildTarget);
-
                 if (PlayerSettings.iOS.cameraUsageDescription.Length == 0)
                 {
                     Debug.Log("Setting Camera Usage Description for iOS");
@@ -79,10 +71,10 @@ namespace Vuforia.EditorClasses
                     PlayerSettings.SetScriptingBackend(iOSBuildTarget, ScriptingImplementation.IL2CPP);
                 }
 
-                if (PlayerSettings.iOS.targetOSVersionString != "9.0")
+                if (PlayerSettings.iOS.targetOSVersionString != "11.0")
                 {
-                    Debug.Log("Setting Minimum iOS Version to 9.0");
-                    PlayerSettings.iOS.targetOSVersionString = "9.0";
+                    Debug.Log("Setting Minimum iOS Version to 11.0");
+                    PlayerSettings.iOS.targetOSVersionString = "11.0";
                 }
 
                 // Here we set the scripting define symbols for IOS
@@ -97,10 +89,6 @@ namespace Vuforia.EditorClasses
             wsaSymbols = wsaSymbols ?? "";
             if (!wsaSymbols.Contains(VUFORIA_WSA_SETTINGS))
             {
-                EnableVuforia(wsaBuildTarget);
-
-                CheckVuforiaConfigurationForEyewearSettings(wsaBuildTarget);
-
                 if (PlayerSettings.GetScriptingBackend(wsaBuildTarget) != ScriptingImplementation.IL2CPP)
                 {
                     Debug.Log("Setting WSA Scripting Backend to IL2CPP");
@@ -121,72 +109,9 @@ namespace Vuforia.EditorClasses
                 // so we can remember that the settings were set once.
                 PlayerSettings.SetScriptingDefineSymbolsForGroup(wsaBuildTarget, wsaSymbols + ";" + VUFORIA_WSA_SETTINGS);
             }
-
-
+            
             // Unregister callback so that this script is only executed once
             EditorApplication.update -= UpdatePlayerSettings;
-        }
-
-
-        static void EnableVuforia(BuildTargetGroup buildTargetGroup)
-        {
-            if (!PlayerSettings.GetPlatformVuforiaEnabled(buildTargetGroup))
-            {
-                Debug.Log("Enabling Vuforia for " + buildTargetGroup.ToString());
-                PlayerSettings.SetPlatformVuforiaEnabled(buildTargetGroup, true);
-            }
-        }
-
-
-        static void EnableVR(BuildTargetGroup buildTargetGroup)
-        {
-            if (!UnityEditor.PlayerSettings.GetVirtualRealitySupported(buildTargetGroup))
-            {
-                Debug.Log("Enabling Virtual Reality for " + buildTargetGroup.ToString());
-                UnityEditor.PlayerSettings.SetVirtualRealitySupported(buildTargetGroup, true);
-
-                // Set the VR SDK to either Vuforia or Windows Mixed Reality based on VuforiaConfiguration settings
-                // Vuforia: Suports ARVR Stereo Viewer mode for Android/iOS or StereoRendering for ODG
-                // Windows Mixed Reality: Supports HoloLens
-
-                string vrSDK = (buildTargetGroup == BuildTargetGroup.WSA) ? "WindowsMR" : "Vuforia";
-                Debug.Log("Setting Virtual Reality SDK to " + vrSDK + " for " + buildTargetGroup.ToString());
-                UnityEditor.PlayerSettings.SetVirtualRealitySDKs(buildTargetGroup, new[] { vrSDK });
-            }
-        }
-
-
-        static void CheckVuforiaConfigurationForEyewearSettings(BuildTargetGroup buildTargetGroup)
-        {
-            VuforiaConfiguration vuforiaConfiguration = VuforiaConfiguration.Instance;
-
-            DigitalEyewearARController.EyewearType eyewearType = vuforiaConfiguration.DigitalEyewear.EyewearType;
-            DigitalEyewearARController.SeeThroughConfiguration opticalConfig = vuforiaConfiguration.DigitalEyewear.SeeThroughConfiguration;
-
-            switch (buildTargetGroup)
-            {
-                case BuildTargetGroup.Android:
-                    if (eyewearType == DigitalEyewearARController.EyewearType.VideoSeeThrough ||
-                        (eyewearType == DigitalEyewearARController.EyewearType.OpticalSeeThrough &&
-                        opticalConfig == DigitalEyewearARController.SeeThroughConfiguration.Vuforia))
-                    {
-                        EnableVR(buildTargetGroup);
-                    }
-                    break;
-                case BuildTargetGroup.iOS:
-                    if (eyewearType == DigitalEyewearARController.EyewearType.VideoSeeThrough)
-                    {
-                        EnableVR(buildTargetGroup);
-                    }
-                    break;
-                case BuildTargetGroup.WSA:
-                    if (eyewearType == DigitalEyewearARController.EyewearType.OpticalSeeThrough &&
-                        opticalConfig == DigitalEyewearARController.SeeThroughConfiguration.HoloLens)
-                    {
-                        EnableVR(buildTargetGroup);
-                    }
-                    break;
-            }
         }
     }
 }

@@ -1,5 +1,5 @@
 /*============================================================================== 
-Copyright (c) 2017-2018 PTC Inc. All Rights Reserved.
+Copyright (c) 2021 PTC Inc. All Rights Reserved.
 
 Vuforia is a trademark of PTC Inc., registered in the United States and other 
 countries.   
@@ -8,53 +8,26 @@ countries.
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Vuforia;
 
 public class AboutManager : MonoBehaviour
 {
-    public enum AboutScreenSample
-    {
-        ImageTargets,
-        VuMark,
-        CylinderTargets,
-        MultiTargets,
-        UserDefinedTargets,
-        ObjectReco,
-        CloudReco,
-        VirtualButtons,
-        ModelTargets,
-        GroundPlane,
-        BackgroundTextureAccess,
-        OcclusionManagement,
-        Books,
-        ARVR
-    }
-
-    #region PUBLIC_MEMBERS
-    public AboutScreenSample m_AboutScreenSample;
-    #endregion //PUBLIC_MEMBERS
-
-
-    #region PRIVATE_METHODS
+    public AboutScreenSample AboutScreenSampleInfo;
+    
     public void LoadNextScene()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1);
     }
-    #endregion //PRIVATE_METHODS
-
-
-    #region MONOBEHAVIOUR_METHODS
 
     void Start()
     {
-        UpdateAboutText();
+        VuforiaApplication.Instance.OnVuforiaInitialized += OnVuforiaInitialized;
     }
 
     void Update()
     {
         if (Input.GetKeyUp(KeyCode.Return) || Input.GetKeyUp(KeyCode.JoystickButton0))
-        {
             LoadNextScene();
-        }
 
         if (Input.GetKeyUp(KeyCode.Escape))
         {
@@ -65,24 +38,20 @@ public class AboutManager : MonoBehaviour
 #endif
             }
             else
-            {
                 Application.Quit();
-            }
         }
     }
-    #endregion // MONOBEHAVIOUR_METHODS
-
-    void UpdateAboutText()
+    
+    void OnVuforiaInitialized(VuforiaInitError error)
     {
-        AboutScreenInfo m_AboutScreenInfo = new AboutScreenInfo();
-
-        string title = m_AboutScreenInfo.GetTitle(m_AboutScreenSample.ToString());
-        string description = m_AboutScreenInfo.GetDescription(m_AboutScreenSample.ToString());
-
-        Text[] textElements = GetComponentsInChildren<Text>();
+        VuforiaApplication.Instance.OnVuforiaInitialized -= OnVuforiaInitialized;
+        
+        var aboutScreenInfo = new AboutScreenInfo();
+        var title = aboutScreenInfo.GetTitle(AboutScreenSampleInfo.ToString());
+        var description = aboutScreenInfo.GetDescription(AboutScreenSampleInfo.ToString());
+        var textElements = GetComponentsInChildren<Text>();
         textElements[0].text = title;
-        TextMeshProUGUI textMeshProUGUI = GetComponentInChildren<TextMeshProUGUI>();
+        var textMeshProUGUI = GetComponentInChildren<TextMeshProUGUI>();
         textMeshProUGUI.text = description;
     }
-
 }

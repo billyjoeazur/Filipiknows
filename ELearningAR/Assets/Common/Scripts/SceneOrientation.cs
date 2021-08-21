@@ -7,10 +7,8 @@ countries.
 
 using UnityEngine;
 
-public class SceneOrientation : MonoBehaviour {
-
-    #region PUBLIC_MEMBERS
-
+public class SceneOrientation : MonoBehaviour 
+{
     public enum Orientation {
         AUTOROTATION,
         PORTRAIT,
@@ -19,22 +17,12 @@ public class SceneOrientation : MonoBehaviour {
 
     public Orientation sceneOrientation;
 
-    #endregion // PUBLIC_MEMBERS
-
-
-    #region MONOBEHAVIOUR_METHODS
-
     void Awake()
     {
         SetSceneOrientation();
     }
 
-    #endregion // MONOBEHAVIOUR_METHODS
-
-
-    #region PRIVATE_METHODS
-
-    private void SetSceneOrientation()
+    void SetSceneOrientation()
     {
         switch (sceneOrientation)
         {
@@ -49,7 +37,4 @@ public class SceneOrientation : MonoBehaviour {
                 break;
         }
     }
-
-    #endregion // PRIVATE_METHODS
-
 }

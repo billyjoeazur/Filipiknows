@@ -8,71 +8,63 @@ using Vuforia;
 
 public class InitErrorHandler : MonoBehaviour
 {
-    #region PRIVATE_MEMBER_VARIABLES
-    string key;
-    string errorMsg;
-    const string errorTitle = "Vuforia Initialization Error";
-    #endregion PRIVATE_MEMBER_VARIABLES
-
-
-    #region MONOBEHAVIOUR_METHODS
+    string mKey;
+    string mErrorMessage;
+    
+    const string ERROR_TITLE = "Vuforia Initialization Error";
+    
     void Awake()
     {
-        VuforiaRuntime.Instance.RegisterVuforiaInitErrorCallback(OnVuforiaInitError);
+        VuforiaApplication.Instance.OnVuforiaInitialized += OnVuforiaInitError;
     }
 
     void OnDestroy()
-    {
-        VuforiaRuntime.Instance.UnregisterVuforiaInitErrorCallback(OnVuforiaInitError);
+    { 
+        VuforiaApplication.Instance.OnVuforiaInitialized -= OnVuforiaInitError;
     }
-    #endregion MONOBEHAVIOUR_METHODS
-
-
-    #region PRIVATE_METHODS
-    void OnVuforiaInitError(VuforiaUnity.InitError error)
+    
+    void OnVuforiaInitError(VuforiaInitError error)
     {
-        if (error != VuforiaUnity.InitError.INIT_SUCCESS)
-        {
+        if (error != VuforiaInitError.NONE)
             ShowErrorMessage(error);
-        }
     }
 
-    void ShowErrorMessage(VuforiaUnity.InitError errorCode)
+    void ShowErrorMessage(VuforiaInitError errorCode)
     {
         switch (errorCode)
         {
-            case VuforiaUnity.InitError.INIT_EXTERNAL_DEVICE_NOT_DETECTED:
-                errorMsg =
+            /* case VuforiaInitError.EXTERNAL_DEVICE_NOT_DETECTED:
+                mErrorMessage =
                     "Failed to initialize Vuforia because this " +
                     "device is not docked with required external hardware.";
-                break;
-            case VuforiaUnity.InitError.INIT_LICENSE_ERROR_MISSING_KEY:
-                errorMsg =
+                break;*/
+            case VuforiaInitError.LICENSE_CONFIG_MISSING_KEY:
+                mErrorMessage =
                     "Vuforia App Key is missing. \n" +
                     "Please get a valid key, by logging into your account at " +
                     "developer.vuforia.com and creating a new project.";
                 break;
-            case VuforiaUnity.InitError.INIT_LICENSE_ERROR_INVALID_KEY:
-                errorMsg =
+            case VuforiaInitError.LICENSE_CONFIG_INVALID_KEY:
+                mErrorMessage =
                     "Vuforia App key is invalid. \n" +
                     "Please get a valid key, by logging into your account at " +
                     "developer.vuforia.com and creating a new project. \n\n" +
                     GetKeyInfo();
                 break;
-            case VuforiaUnity.InitError.INIT_LICENSE_ERROR_NO_NETWORK_TRANSIENT:
-                errorMsg = "Unable to contact server. Please try again later.";
+            case VuforiaInitError.LICENSE_CONFIG_NO_NETWORK_TRANSIENT:
+                mErrorMessage = "Unable to contact server. Please try again later.";
                 break;
-            case VuforiaUnity.InitError.INIT_LICENSE_ERROR_NO_NETWORK_PERMANENT:
-                errorMsg = "No network available. Please make sure you are connected to the Internet.";
+            case VuforiaInitError.LICENSE_CONFIG_NO_NETWORK_PERMANENT:
+                mErrorMessage = "No network available. Please make sure you are connected to the Internet.";
                 break;
-            case VuforiaUnity.InitError.INIT_LICENSE_ERROR_CANCELED_KEY:
-                errorMsg =
+            case VuforiaInitError.LICENSE_CONFIG_KEY_CANCELED:
+                mErrorMessage =
                     "This App license key has been cancelled and may no longer be used. " +
                     "Please get a new license key. \n\n" +
                     GetKeyInfo();
                 break;
-            case VuforiaUnity.InitError.INIT_LICENSE_ERROR_PRODUCT_TYPE_MISMATCH:
-                errorMsg =
+            case VuforiaInitError.LICENSE_CONFIG_PRODUCT_TYPE_MISMATCH:
+                mErrorMessage =
                     "Vuforia App key is not valid for this product. Please get a valid key, " +
                     "by logging into your account at developer.vuforia.com and choosing the " +
                     "right product type during project creation. \n\n" +
@@ -80,37 +72,37 @@ public class InitErrorHandler : MonoBehaviour
                     "Note that Universal Windows Platform (UWP) apps require " +
                     "a license key created on or after August 9th, 2016.";
                 break;
-            case VuforiaUnity.InitError.INIT_NO_CAMERA_ACCESS:
-                errorMsg =
-                    "User denied Camera access to this app.\n" +
-                    "To restore, enable Camera access in Settings:\n" +
+            case VuforiaInitError.DEVICE_NOT_SUPPORTED:
+                mErrorMessage = "Failed to initialize Vuforia Engine because this device is not supported.";
+                break;
+            case VuforiaInitError.PERMISSION_ERROR:
+                mErrorMessage =
+                    "One or more permissions required by Vuforia Engine are missing or not granted by user.\n" +
+                    "For example, the user may have denied camera access to this app.\n" +
+                    "In this case, you can enable camera access in Settings:\n" +
                     "Settings > Privacy > Camera > " + Application.productName + "\n" +
-                    "Also verify that the Camera is enabled in:\n" +
+                    "Also verify that the camera is enabled in:\n" +
                     "Settings > General > Restrictions.";
                 break;
-            case VuforiaUnity.InitError.INIT_DEVICE_NOT_SUPPORTED:
-                errorMsg = "Failed to initialize Vuforia because this device is not supported.";
+            case VuforiaInitError.LICENSE_ERROR:
+                mErrorMessage = "A valid license configuration is required.\n";
                 break;
-            case VuforiaUnity.InitError.INIT_ERROR:
-                errorMsg = "Failed to initialize Vuforia.";
+            case VuforiaInitError.INITIALIZATION:
+            default:
+                mErrorMessage = "Failed to initialize Vuforia Engine.";
                 break;
         }
-
-        // Prepend the error code in red
-        errorMsg = "<color=red>" + errorCode.ToString().Replace("_", " ") + "</color>\n\n" + errorMsg;
-
-        // Remove rich text tags for console logging
-        var errorTextConsole = errorMsg.Replace("<color=red>", "").Replace("</color>", "");
-
-        Debug.LogError("Vuforia initialization failed: " + errorCode + "\n\n" + errorTextConsole);
         
-        MessageBox.DisplayMessageBox(errorTitle, errorMsg, true, OnErrorDialogClose);
+        mErrorMessage = "<color=red>" + errorCode.ToString().Replace("_", " ") + "</color>\n\n" + mErrorMessage;
+        var errorTextConsole = mErrorMessage.Replace("<color=red>", "").Replace("</color>", "");
+        Debug.LogError("Vuforia initialization failed: " + errorCode + "\n\n" + errorTextConsole);
+        MessageBox.DisplayMessageBox(ERROR_TITLE, mErrorMessage, true, OnErrorDialogClose);
     }
 
     string GetKeyInfo()
     {
-        string key = VuforiaConfiguration.Instance.Vuforia.LicenseKey;
-        string keyInfo;
+        var key = VuforiaConfiguration.Instance.Vuforia.LicenseKey;
+        var keyInfo = "";
         if (key.Length > 10)
             keyInfo =
                 "Your current key is <color=red>" + key.Length + "</color> characters in length. " +
@@ -122,10 +114,7 @@ public class InitErrorHandler : MonoBehaviour
                 "The key is: <color=red>" + key + "</color>.";
         return keyInfo;
     }
-    #endregion //PRIVATE_METHODS
-
-
-    #region PUBLIC_METHODS
+    
     public void OnErrorDialogClose()
     {
 #if UNITY_EDITOR
@@ -134,5 +123,4 @@ public class InitErrorHandler : MonoBehaviour
         Application.Quit();
 #endif
     }
-    #endregion //PUBLIC_METHODS
 }

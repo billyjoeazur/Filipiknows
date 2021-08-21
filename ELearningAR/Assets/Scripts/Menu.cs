@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Vuforia;
 
 public class Menu : MonoBehaviour
 {
@@ -53,21 +54,43 @@ public class Menu : MonoBehaviour
 		SceneManager.LoadScene("Category");
 	}
 
-	public void QuizLevels()
+	public void Quiz()
 	{
 		FindObjectOfType<AudioManager>().Play("click");
-		SceneManager.LoadScene("QuizLevels");
+		SceneManager.LoadScene("Quiz");
 	}
 
 	public void Lesson()
 	{
 		FindObjectOfType<AudioManager>().Play("click");
-		SceneManager.LoadScene("Lessons");
+		SceneManager.LoadScene("Lesson");
 	}
-
-	private string myURL = "http://www.facebook.com/billyjoeazur123";
+	
+	private string myURL = "https://drive.google.com/file/d/1_g88lGj9llzfGPG931Q-Ucbqy6XQIFGN/view?usp=sharing";
 	public void GoURL()
 	{
 		Application.OpenURL(myURL);
 	}
+
+	private bool onOff = false;
+	public void ToggleFlash()
+	{
+		if (onOff == false)
+		{
+			CameraDevice.Instance.SetFlashTorchMode(true);
+			onOff = true;
+		}
+		else
+		{
+			CameraDevice.Instance.SetFlashTorchMode(false);
+			onOff = false;
+		}
+		FindObjectOfType<AudioManager>().Play("click");
+	}
+
+	//public static BGMusic instance;
+	//private void Start()
+	//{
+	//	instance.CheckMusicStatus();
+	//}
 }

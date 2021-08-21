@@ -6,24 +6,21 @@ Copyright (c) 2015 Qualcomm Connected Experiences, Inc. All Rights Reserved.
 Vuforia is a trademark of PTC Inc., registered in the United States and other
 countries.
 =========================================================================*/
+
 using UnityEngine;
 using Vuforia;
 
 public class FrameRateSettings : MonoBehaviour
 {
-    #region MONOBEHAVIOUR_METHODS
     void Start()
     {
-        VuforiaARController.Instance.RegisterVuforiaStartedCallback(OnVuforiaStarted);
+        VuforiaApplication.Instance.OnVuforiaStarted += OnVuforiaStarted;
     }
-    #endregion
-
-
-    #region PRIVATE_METHODS
-    private void OnVuforiaStarted()
+    
+    void OnVuforiaStarted()
     {
         // Query Vuforia for recommended frame rate and set it in Unity
-        int targetFps = VuforiaRenderer.Instance.GetRecommendedFps(VuforiaRenderer.FpsHint.NONE);
+        var targetFps = VuforiaBehaviour.Instance.CameraDevice.GetRecommendedFPS();
 
         // By default, we use Application.targetFrameRate to set the recommended frame rate.
         // Google Cardboard does not use vsync, and OVR explicitly disables it. If developers 
@@ -36,5 +33,4 @@ public class FrameRateSettings : MonoBehaviour
             Application.targetFrameRate = targetFps;
         }
     }
-    #endregion
 }

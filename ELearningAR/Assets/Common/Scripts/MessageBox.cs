@@ -11,21 +11,18 @@ using UnityEngine.UI;
 
 public class MessageBox : MonoBehaviour
 {
-    #region PRIVATE_MEMBERS
-    Text[] textComponents;
+    Text[] mTextComponents;
     delegate void DelegateMessageBoxButtonAction();
-    DelegateMessageBoxButtonAction m_DelegateMessageBoxAction;
-    #endregion // PRIVATE_MEMBERS
+    DelegateMessageBoxButtonAction mDelegateMessageBoxAction;
 
-
-    #region PUBLIC_METHODS
-
+    const string RESOURCES_MESSAGE_BOX_PREFAB_NAME = "MessageBox";
+    
     public static void DisplayMessageBox(string title, string body, bool dismissable, Action dismissAction)
     {
-        GameObject prefab = (GameObject)Resources.Load("MessageBox");
+        var prefab = (GameObject)Resources.Load(RESOURCES_MESSAGE_BOX_PREFAB_NAME);
         if (prefab)
         {
-            MessageBox messageBox = Instantiate(prefab.GetComponent<MessageBox>());
+            var messageBox = Instantiate(prefab.GetComponent<MessageBox>());
             messageBox.Setup(title, body, dismissable, dismissAction);
         }
     }
@@ -33,39 +30,28 @@ public class MessageBox : MonoBehaviour
     public void MessageBoxButton()
     {
         // This method called by the UI Canvas Button
-
-        // If there's a custom method, run it first
-        if (m_DelegateMessageBoxAction != null)
-        {
-            m_DelegateMessageBoxAction();
-        }
+        if (mDelegateMessageBoxAction != null)
+            mDelegateMessageBoxAction();
 
         // Destroy MessageBox
         Destroy(gameObject);
     }
 
-    #endregion // PUBLIC_METHODS
-
-
-    #region PRIVATE_METHODS
-
     void Setup(string title, string body, bool dismissable = true, Action closeButton = null)
     {
-        textComponents = GetComponentsInChildren<Text>();
+        mTextComponents = GetComponentsInChildren<Text>();
 
-        if (textComponents.Length >= 2)
+        if (mTextComponents.Length >= 2)
         {
-            textComponents[0].text = title;
-            textComponents[1].text = body;
+            mTextComponents[0].text = title;
+            mTextComponents[1].text = body;
         }
 
         if (closeButton != null)
-            m_DelegateMessageBoxAction = new DelegateMessageBoxButtonAction(closeButton);
+            mDelegateMessageBoxAction = new DelegateMessageBoxButtonAction(closeButton);
 
-        Button button = GetComponentInChildren<Button>();
+        var button = GetComponentInChildren<Button>();
         if (button != null)
             button.gameObject.SetActive(dismissable);
     }
-
-    #endregion // PRIVATE_METHODS
 }

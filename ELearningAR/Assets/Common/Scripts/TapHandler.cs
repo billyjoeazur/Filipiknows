@@ -6,62 +6,53 @@ Copyright (c) 2015 Qualcomm Connected Experiences, Inc. All Rights Reserved.
 Vuforia is a trademark of PTC Inc., registered in the United States and other 
 countries.
 ===============================================================================*/
+
+using System;
 using UnityEngine;
 
 public class TapHandler : MonoBehaviour
 {
-    #region PRIVATE_MEMBERS
-    const float DOUBLE_TAP_MAX_DELAY = 0.5f; //seconds
+    const float DOUBLE_TAP_MAX_DELAY_IN_SECONDS = 0.5f;
+    
     float mTimeSinceLastTap;
-    MenuOptions m_MenuOptions;
+    MenuOptions mMenuOptions;
     CameraSettings m_CameraSettings;
-    #endregion //PRIVATE_MEMBERS
-
-
-    #region PROTECTED_MEMBERS
-    protected int mTapCount;
-    #endregion //PROTECTED_MEMBERS
-
-
-    #region MONOBEHAVIOUR_METHODS
+    int mTapCount;
+    
     void Start()
     {
         mTapCount = 0;
         mTimeSinceLastTap = 0;
-        m_MenuOptions = FindObjectOfType<MenuOptions>();
+        mMenuOptions = FindObjectOfType<MenuOptions>();
         m_CameraSettings = FindObjectOfType<CameraSettings>();
     }
 
     void Update()
     {
-        if (m_MenuOptions && m_MenuOptions.IsDisplayed)
+        if (mMenuOptions != null && mMenuOptions.IsDisplayed)
         {
             mTapCount = 0;
             mTimeSinceLastTap = 0;
         }
         else
-        {
             HandleTap();
-        }
     }
-    #endregion //MONOBEHAVIOUR_METHODS
-
-
-    #region PRIVATE_METHODS
-    private void HandleTap()
+    
+    void HandleTap()
     {
         if (mTapCount == 1)
         {
             mTimeSinceLastTap += Time.deltaTime;
-            if (mTimeSinceLastTap > DOUBLE_TAP_MAX_DELAY)
+            if (mTimeSinceLastTap > DOUBLE_TAP_MAX_DELAY_IN_SECONDS)
             {
+                mTapCount = 0;
+                mTimeSinceLastTap = 0;
+                
                 // too late for double tap, 
                 // we confirm it was a single tap
                 OnSingleTapConfirmed();
 
                 // reset touch count and timer
-                mTapCount = 0;
-                mTimeSinceLastTap = 0;
             }
         }
         else if (mTapCount == 2)
@@ -78,15 +69,10 @@ public class TapHandler : MonoBehaviour
         {
             mTapCount++;
             if (mTapCount == 1)
-            {
                 OnSingleTap();
-            }
         }
     }
-    #endregion // PRIVATE_METHODS
-
-
-    #region PROTECTED_METHODS
+    
     /// <summary>
     /// This method can be overridden by custom (derived) TapHandler implementations,
     /// to perform special actions upon single tap.
@@ -96,17 +82,12 @@ public class TapHandler : MonoBehaviour
     protected virtual void OnSingleTapConfirmed()
     {
         if (m_CameraSettings)
-        {
             m_CameraSettings.TriggerAutofocusEvent();
-        }
     }
 
     protected virtual void OnDoubleTap()
     {
-        if (m_MenuOptions && !m_MenuOptions.IsDisplayed)
-        {
-            m_MenuOptions.ShowOptionsMenu(true);
-        }
+        if (mMenuOptions && !mMenuOptions.IsDisplayed)
+            mMenuOptions.ShowOptionsMenu(true);
     }
-    #endregion // PROTECTED_METHODS
 }

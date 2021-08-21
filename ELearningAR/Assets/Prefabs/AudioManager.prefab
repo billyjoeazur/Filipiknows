@@ -645,79 +645,79 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Asul
-    clip: {fileID: 8300000, guid: 1eda286d8d0c35c4094e3aaa9c6b847e, type: 3}
+    clip: {fileID: 8300000, guid: fe325b8e4d8d8ef4ebe8af1f0188c38f, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Berde
-    clip: {fileID: 8300000, guid: aeb503188074b4744b8281bf4f578937, type: 3}
+    clip: {fileID: 8300000, guid: 527a9eb19744b204eb053a23b9c62c70, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Dilaw
-    clip: {fileID: 8300000, guid: e6577538074ee1049aaa71a0232ff489, type: 3}
+    clip: {fileID: 8300000, guid: 4e7864ff4daaf2b4ebfaba5974d8fdbd, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Itim
-    clip: {fileID: 8300000, guid: a06da7a4a8342f644897360dcd3b8b57, type: 3}
+    clip: {fileID: 8300000, guid: b9340377f5c4cc04f8f62f8c446f494d, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Kahel
-    clip: {fileID: 8300000, guid: 0ed01a9fbc7f3ef4b904b6caa6706756, type: 3}
+    clip: {fileID: 8300000, guid: 4709f5fe95758ba4aaaab741f12447d6, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Kayumanggi
-    clip: {fileID: 8300000, guid: 20a38c46145b18b41863100978b98e33, type: 3}
+    clip: {fileID: 8300000, guid: 7b23b0935ba146c4583a4e45bcded774, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Lila
-    clip: {fileID: 8300000, guid: 7aa7fbebacd6e5d41a271656a7bbf629, type: 3}
+    clip: {fileID: 8300000, guid: 3387e93d611665349aaf76eaec231e56, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Pula
-    clip: {fileID: 8300000, guid: 4155bab2009e7304b81b15cb354bc9a9, type: 3}
+    clip: {fileID: 8300000, guid: d24de96c246c91d4fa3da1a4e63d629d, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Puti
-    clip: {fileID: 8300000, guid: f6b2f4fb4b6a2e643be2b3d78150b3bb, type: 3}
+    clip: {fileID: 8300000, guid: 4d14f5cfa0681a24d9fcab5c0e54beae, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Rosas
-    clip: {fileID: 8300000, guid: 840e4d83e29cf6e4ab7b0b9c4e5ca67c, type: 3}
+    clip: {fileID: 8300000, guid: 952d801d310250844a67aabf0566b235, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: Hugis-brilyante
-    clip: {fileID: 8300000, guid: 840e4d83e29cf6e4ab7b0b9c4e5ca67c, type: 3}
+  - name: Diyamante
+    clip: {fileID: 8300000, guid: 8d7eb6b97a57c6344935a2038eafde22, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Bilog
-    clip: {fileID: 8300000, guid: 0fd1f7ed3af9adf429bcdec4f180a428, type: 3}
+    clip: {fileID: 8300000, guid: 50f1b771cf7085d479baddb42731ce86, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: Habilog
-    clip: {fileID: 8300000, guid: 962b75da0b7360d4892a1fafb577a669, type: 3}
+  - name: Biluhaba
+    clip: {fileID: 8300000, guid: 3567c8ad6ec983d46bce0b65302b14fa, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -735,13 +735,13 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Parihaba
-    clip: {fileID: 8300000, guid: 5c7b38ac6db0eb941bda544dac7122d7, type: 3}
+    clip: {fileID: 8300000, guid: f1e21dd3f7062d942801338757ee8247, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Parisukat
-    clip: {fileID: 8300000, guid: fd19a234c0491994c94bdf7875c03131, type: 3}
+    clip: {fileID: 8300000, guid: 5ea3cb263ef210f47be7fbde845cc01f, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -753,13 +753,115 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Tatsulok
-    clip: {fileID: 8300000, guid: e7c98c289708f004a8ae1d5acbdc8fc0, type: 3}
+    clip: {fileID: 8300000, guid: 4bd81786db3faf24a9aff59fde594136, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: click
     clip: {fileID: 8300000, guid: 846a603d88eccdc43ad4eeb48b848a8e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: correct
+    clip: {fileID: 8300000, guid: cda901e6a6c4ffe49ad4acce001453d7, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: wrong
+    clip: {fileID: 8300000, guid: 14320892b639932449699c6c113598a5, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Bibig
+    clip: {fileID: 8300000, guid: dc5bb4360d097cd489d28e6ce26b20d7, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Binti
+    clip: {fileID: 8300000, guid: 82c3e4751c4ef8942a04390dfd831b41, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Braso
+    clip: {fileID: 8300000, guid: 1e39f62e8b379064ebaa1451c5fbf893, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Dibdib
+    clip: {fileID: 8300000, guid: b600a2305508e2549ab7a068e8cac8e2, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Hita
+    clip: {fileID: 8300000, guid: 93e3257feec26ae4da7f7d8dd8be90d8, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Ilong
+    clip: {fileID: 8300000, guid: 499f7ac88ee831844864c66b41e016ba, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Kamay
+    clip: {fileID: 8300000, guid: 236d9fb0b4aa61742acfae3ad499e314, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Leeg
+    clip: {fileID: 8300000, guid: 230ea162fd226c34a8dfe56ee7d1e5bc, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Mata
+    clip: {fileID: 8300000, guid: 30b3959fa414d344a9797e42f50c3449, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Paa
+    clip: {fileID: 8300000, guid: e17ed92d8e8d7dc41a05f20fb3fced37, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Tainga
+    clip: {fileID: 8300000, guid: b342b0497a8fcd74d8b849610fb8d0fa, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Tiyan
+    clip: {fileID: 8300000, guid: e21be8a32818ae44c8d72e880f7d2c84, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Tuhod
+    clip: {fileID: 8300000, guid: 63db1c5427e41ff4a9b2225afa6f704e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Ulo
+    clip: {fileID: 8300000, guid: 44c3f50f8f745224eb5bbea445eaea5b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: bgMusic
+    clip: {fileID: 8300000, guid: 0eea67b1de49ec141b6a880ce7857cac, type: 3}
     volume: 1
     pitch: 1
     loop: 0
