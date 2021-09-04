@@ -36,12 +36,6 @@ public class Menu : MonoBehaviour
 		SceneManager.LoadScene("Main");
 	}
 
-	public void About()
-	{
-		FindObjectOfType<AudioManager>().Play("click");
-		SceneManager.LoadScene("About");
-	}
-
 	public void Guide()
 	{
 		FindObjectOfType<AudioManager>().Play("click");
@@ -66,7 +60,7 @@ public class Menu : MonoBehaviour
 		SceneManager.LoadScene("Lesson");
 	}
 	
-	private string myURL = "https://drive.google.com/file/d/1_g88lGj9llzfGPG931Q-Ucbqy6XQIFGN/view?usp=sharing";
+	private string myURL = "https://drive.google.com/file/d/1aSYriqxW1pZXrCX_dY2xYPIex7_uLh1O/view?usp=sharing";
 	public void GoURL()
 	{
 		Application.OpenURL(myURL);
@@ -88,9 +82,5 @@ public class Menu : MonoBehaviour
 		FindObjectOfType<AudioManager>().Play("click");
 	}
 
-	//public static BGMusic instance;
-	//private void Start()
-	//{
-	//	instance.CheckMusicStatus();
-	//}
+	
 }
